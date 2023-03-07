@@ -109,7 +109,28 @@ let nombre = prompt("ingresa tu nombre");
 } */
 
 if (nombre == "Dario" || nombre == "DARIO" || nombre == "DaRiO") {
-    console.log("bienvenido " + nombre);
-  } else {
-    console.log("Hola Desconocido");
-  }
+  console.log("bienvenido " + nombre);
+} else {
+  console.log("Hola Desconocido");
+}
+
+//EJEMPLO DE USO COMBINADO DE OPERADOR AND Y OR
+/* En Argentina existe un rango de edad para poder votar 
+este script evalua dichas condiciones.
+Analicen el código para comprender qué hace en cada caso evaluado
+*/ 
+let edadObligatoria = 18;
+
+let edadOptativa = 16;
+
+let edadLimite = 69;
+
+let edadUsuario = parseInt(prompt("Ingresá tu edad"));
+
+if (edadUsuario >= edadObligatoria && edadUsuario <= edadLimite) {
+  alert("Estás obligado/a a Votar");
+} else if (edadUsuario >= edadOptativa || edadUsuario > edadLimite) {
+  alert("Podés votar, si querés");
+} else {
+  alert("No podés votar todavía");
+}
